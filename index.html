@@ -7,111 +7,164 @@
     <title>Hire</title>
 
     <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/8921e10786.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/SplitText.min.js"></script>
 
 </head>
 
 <body>
+    <!-- <div id="loader">
+        <img id="loader-logo" src="./images/logoHireRemoveBG.png" alt="Logo">
+    </div> -->
 
+
+
+
+
+    <nav>
+        <div class="logo">
+            <img src="./images/logoHireRemoveBG.png" alt="">
+        </div>
+
+        <div class="btnApp-container">
+            <button class="btnApp">Téléchargez l'application</button>
+        </div>
+
+    </nav>
+
+
+    <div id="diamond"></div>
     <header>
-        <div class="nav">
-            <div class="items-left">
-                <a href="#">Services</a>
-                <a href="#">Room</a>
+
+
+        <div class="hero-section">
+            <div class="hero-img">
+                <img src="./images/hirePhone.png" alt="" id="hirePhone">
             </div>
-            <div class="items-right">
-                <a href="#">Bookin</a>
-                <a href="#">Contact</a>
+            <div class="hero-content">
+                <h1>Hire, l'application mobile révolutionnaire qui met en relation employeurs et salariés !
+                </h1>
+                <div class="container-badges">
+                    <a href="#" target="_blank">
+                        <img class="badges" src="./images/Download_on_the_App_Store_Badge_FR_RGB_blk_100517.svg"
+                            alt="Disponible sur l'App Store">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img class="badges" src="./images/google-play-badge.png" alt="Disponible sur Google Play">
+                    </a>
+                </div>
             </div>
         </div>
-
-        <div class="logo-container">
-            <img class="logo" src="./images/logo Hire.svg" alt="">
-        </div>
-
-        <div class="container"></div>
-        </section>
     </header>
 
+
     <main>
-        <section>
-            <div class="container__app__content">
-                <div class="container__app__img">
-                    <img src="./images/twoTel.png" alt="">
-                </div>
-                <div class="container__app__content">
-                    <h2 class="reveal">Grâce au swipe, trouver du travail où ton futur employé, n'a jamais été aussi
-                        simple!
+        <section class="swipe">
+            <div class="container-section">
+                <div class="section-content">
+                    <h2>Grâce au swipe, trouver du travail ou ton futur employé n'a jamais été aussi simple !
                     </h2>
+                    <p>Fais glisser l'offre à droite si elle te plaît, et à gauche si c'est non. C'est super simple !
+                    </p>
                 </div>
+                <div class="section-img">
+                    <img src="./images/blankPhoneHire.png" alt="">
+                    <img src="./images/screenHireSwipe.png" alt="" id="screenHireSwipe">
+                </div>
+
             </div>
         </section>
-        <section>
-            <div class="container__app__content">
-                <div class="container__app__content">
-                    <div class="container__app__img">
-                        <img src="./images/teamWork.jpg" alt="">
-                    </div>
-                    <h2 class="reveal">La première plateforme de recherche d'emploie communautaire.
-                    </h2>
+
+        <section class="match inverted">
+            <div class="container-section">
+                <div class="section-img" id="matchPhone">
+                    <img src="./images/matchHire.png" alt="">
                 </div>
-            </div>
-        </section>
-        <section>
-            <div class="container__app__content">
-                <div class="container__app__img">
-                    <img src="./images/twoTel.png" alt="">
-                </div>
-                <div class="container__app__content">
-                    <h2 class="reveal">Remplissez votre profil en indiquant vos recherches, et notre algorithme se
-                        chargera de vous le
-                        trouver.
+                <div class="section-content">
+                    <h2>Ça a matché entre vous ? Contacte sans plus tarder ta potentielle future entreprise ou ton
+                        nouvel employé !
                     </h2>
+                    <p>Un match ouvre une nouvelle porte. Ne perds pas de temps et explore cette nouvelle opportunité
+                        dès maintenant.</p>
+
                 </div>
             </div>
         </section>
 
-        <div class="contact">
 
-        </div>
+        <section class="profil">
+            <div class="container-section">
+                <div class="section-content">
+                    <h2>Une inscription simple et rapide pour cibler vos besoins et vous proposer la perle rare.
+                    </h2>
+                    <p>Complétez votre profil en quelques minutes et découvrez des offres qui vous correspondent
+                        vraiment.
+                    </p>
+                </div>
+                <div class="section-img" id="profilPhone">
+                    <img src="./images/signInHire.png" alt="">
+                </div>
 
+            </div>
+        </section>
+
+        <section class="contact">
+
+
+            <div class="contact-container">
+                <div class="contactImg-container">
+                    <img src="./images/LogoWithoutBg.png" alt="">
+                </div>
+                <div class="contact-content">
+                    <h3>Pour trouver du travail, avez-vous pensé à aller voir <span>HIRE</span> ?</h3>
+                </div>
+                <div class="container-badges contact-badges">
+                    <a href="#" target="_blank">
+                        <img class="badges" src="./images/Download_on_the_App_Store_Badge_FR_RGB_blk_100517.svg"
+                            alt="Disponible sur l'App Store">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img class="badges" src="./images/google-play-badge.png" alt="Disponible sur Google Play">
+                    </a>
+                </div>
+            </div>
+
+        </section>
     </main>
 
+    <footer>
+        <!-- <div class="container-footer">
+            <div class="footer-logo">
+                <img src="./images/logoHireRemoveBG.png" alt="">
+            </div>
+            <div class="footer-content">
+                <h2>contact</h2>
+                <ul>
+                    <li><i class="fa-solid fa-mobile-screen-button"></i>0606060606</li>
+                    <li><i class="fa-solid fa-envelope"></i>truc@gmail.com</li>
+                </ul>
+            </div>
 
-    <!-- <section>
-            <div class="content gs_reveal">
-                <div class="container__text__app">
-                    <p>La première plateforme de recherche d'emploie communautaire.</p>
-                </div>
-                <div class="container__img__app gs_reveal gs_reveal_fromRight">
-                    <img src="./images/teamWork.jpg" alt="">
-                </div>
-            </div>
-        </section>
+        </div> -->
 
-        <section>
-            <div class="content gs_reveal gs_reveal_fromLeft">
-                <div class="container__img__app">
-                    <img src="./images/profilHire.png" alt="">
-                </div>
-                <div class="container__text__app">
-                    <p>Remplissez votre profil en indiquant vos recherches, et notre algorithme se chargera de vous le
-                        trouver.</p>
-                </div>
+        <div class="madeBy">
+            <div class="madeContent">
+
+                &copy; 2023 USV Hire
+                | Réalisé par <a class="monkey" href="https://monkeysdev.fr/"> <span>MonkeysDev</span>
+                </a>
             </div>
-        </section>
-        <section>
-            <div class="content gs_reveal gs_reveal_fromLeft">
-                <div class="container__img__app">
-                    <img src="./images/profilHire.png" alt="">
-                </div>
-                <div class="container__text__app">
-                    <p>Remplissez votre profil en indiquant vos recherches, et notre algorithme se chargera de vous le
-                        trouver.</p>
-                </div>
+
+            <div class="law">
+                <a href="./mentionsLegales.html">Mentions légales -</a>
+                <a href="./politiqueConfidentialité.html">Politique de confidentialité</a>
             </div>
-        </section> -->
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top"><i class="fa-solid fa-angle-up"></i></button>
 
 
     <script src="./index.js"></script>
