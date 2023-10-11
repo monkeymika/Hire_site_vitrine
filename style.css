@@ -186,7 +186,7 @@ nav {
   padding: 0.8rem;
   border-radius: 50px;
   background: none;
-  font-size: calc(0.4rem + 0.5vw);
+  font-size: calc(0.6rem + 0.5vw);
   font-weight: 900;
 }
 
@@ -444,7 +444,7 @@ nav {
 }
 
 .contact-content h3 {
-  font-size: 4vw;
+  font-size: calc(2rem + 0.5vw);
   padding: 1rem;
 }
 
@@ -474,17 +474,20 @@ nav {
 /* Responsive */
 
 @media (max-width: 576px) {
+  .contact-container {
+    max-width: 100%;
+  }
+
   .contact-badges img {
-    width: 100px;
+    width: 130px;
   }
 
   .contactImg-container {
-    width: 50%;
+    width: 70%;
     object-fit: cover;
   }
 
   .contact-content h3 {
-    font-size: 5vw;
     padding: 1rem;
   }
 }
