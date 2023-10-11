@@ -183,7 +183,7 @@ function revealSection(section) {
         scrollTrigger: {
             trigger: section,
             start: "top 90%",  // Modifié de 80% à 90%
-            end: "bottom 20%",
+            end: "bottom 80%",
             scrub: 1
         }
     });
@@ -195,7 +195,7 @@ function revealSection(section) {
         scrollTrigger: {
             trigger: section,
             start: "top 80%",  // Modifié de 70% à 80%
-            end: "bottom 30%",
+            end: "bottom 90%",
             scrub: 1
         }
     });
