@@ -61,7 +61,7 @@ a {
 }
 
 h2 {
-  font-size: calc(1rem + 2vw);
+  font-size: calc(1.3rem + 2vw);
   font-weight: 900;
 }
 
@@ -71,7 +71,7 @@ h3 {
 }
 
 p {
-  font-size: calc(0.7rem + 1.2vw);
+  font-size: calc(0.8rem + 1.2vw);
 }
 
 #diamond {
@@ -316,7 +316,7 @@ nav {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    max-width: 80%;
+    max-width: 100%;
     padding: 2rem;
   }
 
@@ -334,7 +334,7 @@ nav {
 
 @media (max-width: 576px) {
   .swipe .section-img {
-    width: 80%;
+    width: 100%;
   }
 }
 
@@ -363,6 +363,7 @@ nav {
     max-width: 80%;
     padding: 2rem;
     gap: 0rem;
+    max-width: 100%;
   }
 
   .match .section-content {
@@ -376,7 +377,7 @@ nav {
 
 @media (max-width: 576px) {
   .match .section-img {
-    width: 70%;
+    width: 100%;
   }
 }
 
@@ -397,13 +398,17 @@ nav {
 /* Responsive */
 
 @media (max-width: 768px) {
+  .profil .container-section {
+    max-width: 100%;
+  }
+
   .profil .section-img {
-    width: 50%;
+    width: 100%;
   }
 }
 @media (max-width: 576px) {
   .profil .section-img {
-    width: 70%;
+    width: 100%;
   }
 }
 
@@ -468,11 +473,6 @@ nav {
 
 /* Responsive */
 
-@media (max-width: 768px) {
-  .profil .section-img {
-    width: 50%;
-  }
-}
 @media (max-width: 576px) {
   .contact-badges img {
     width: 100px;
