@@ -167,7 +167,6 @@ document.getElementById("backToTop").addEventListener("click", function () {
 
 /********************** Animation apparition *******************************/
 
-
 // Configuration de base de ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
@@ -183,7 +182,7 @@ function revealSection(section) {
         duration: 1,
         scrollTrigger: {
             trigger: section,
-            start: "top 80%",
+            start: "top 90%",  // Modifié de 80% à 90%
             end: "bottom 20%",
             scrub: 1
         }
@@ -195,7 +194,7 @@ function revealSection(section) {
         duration: 1,
         scrollTrigger: {
             trigger: section,
-            start: "top 70%",
+            start: "top 80%",  // Modifié de 70% à 80%
             end: "bottom 30%",
             scrub: 1
         }
@@ -207,12 +206,44 @@ function revealSection(section) {
         duration: 1,
         scrollTrigger: {
             trigger: section,
-            start: "top 60%",
+            start: "top 70%",  // Modifié de 60% à 70%
             end: "bottom 40%",
             scrub: 1
         }
     });
+
 }
 
 // Appliquer l'animation à chaque section
 document.querySelectorAll("section").forEach(revealSection);
+
+
+/********************* Bande noires************************ */
+
+const rows = document.querySelectorAll(".cb-tagreel-row");
+
+rows.forEach(function (e, i) {
+    let row_width = e.getBoundingClientRect().width;
+    let row_item_width = e.children[0].getBoundingClientRect().width;
+    let initial_offset = ((2 * row_item_width) / row_width) * 100 * -1;
+    let x_translation = initial_offset * -1;
+    // console.log(e.children[0].clientWidth);
+    console.log(x_translation);
+
+    gsap.set(e, {
+        xPercent: `${initial_offset}`
+    });
+
+    let duration = 3;
+
+    var tl = gsap.timeline();
+
+    tl.to(e, {
+        ease: "none",
+        duration: duration,
+        xPercent: 0,
+        repeat: -1
+    });
+});
+
+
