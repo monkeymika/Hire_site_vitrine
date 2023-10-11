@@ -165,11 +165,6 @@ document.getElementById("backToTop").addEventListener("click", function () {
     });
 });
 
-
-
-
-
-
 /********************** Animation apparition *******************************/
 
 
