@@ -589,6 +589,22 @@ nav {
 }
 
 /* Made By*/
+.contact-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.contact-text i {
+  color: var(--darkBlue);
+  font-size: 1.5rem;
+}
+
+hr {
+  width: 10%;
+  margin: 1rem auto;
+}
 
 .madeBy {
   background: black;
