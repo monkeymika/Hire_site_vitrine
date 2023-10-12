@@ -1,39 +1,54 @@
 /**************************** Loader ********************************/
-// Initialiser le loader avec une rotation
-gsap.set("#loader-logo", {
-    scale: 0.6,
-    opacity: 1,
-    rotation: 0
-});
+let loaderTimeline = gsap.timeline({ paused: true });
 
-// Créer une timeline pour le loader
-let loaderTimeline = gsap.timeline();
-
-// Faire tourner le logo
-loaderTimeline.to("#loader-logo", {
-    rotation: 360,
-    duration: 2,
-    ease: "power1.inOut",
-    repeat: 1
-});
-
-// Effet de swipe pour faire disparaître le loader
-loaderTimeline.to("#loader", {
-    x: "-100%",
-    duration: 1,
+// Première partie : Animation de disparition des barres
+loaderTimeline.staggerTo(".bar", 0.6, {
+    width: "0%",
     ease: "power2.inOut",
+}, -0.1);  // Remarque le '-' devant 0.1 pour inverser l'ordre de l'animation.
+
+// Ajout d'une pause
+loaderTimeline.to(".bar", { delay: 0.7, onComplete: function () { } }); // Pause de 0,7 seconde
+
+// Deuxième partie : Animation d'apparition des barres (inverse de la première partie)
+loaderTimeline.staggerTo(".bar", 0.6, {
+    width: "20%",
+    ease: "power2.inOut",
+}, 0.1);
+
+// Troisième partie : Faire disparaître le loader immédiatement après la fin de l'animation des barres
+loaderTimeline.to("#loader", {
+    opacity: 0,
+    duration: 0.5,
     onComplete: function () {
-        // Supprimer le loader du DOM
         document.getElementById("loader").style.display = "none";
     }
 });
 
-// Si vous voulez déclencher cette animation lorsque la page est complètement chargée :
 window.addEventListener("load", () => {
     loaderTimeline.play();
 });
 
 
+/**************************** Apparition de la Hero Section ********************************/
+// On commence par définir une fonction pour initialiser les éléments à animer
+function setInitialStates() {
+    gsap.set("nav", { x: 100, opacity: 0 });
+    gsap.set("#hirePhone", { x: -100, opacity: 0 });
+    gsap.set(".hero-content", { opacity: 0 });
+}
+
+setInitialStates(); // On appelle la fonction au chargement du JS
+
+// Ensuite, on ajoute ces animations à la fin de notre timeline loader
+loaderTimeline.to("nav", { x: 0, opacity: 1, duration: 0.4 });
+loaderTimeline.to("#hirePhone", { x: 0, opacity: 1, duration: 0.6 }, "-=0.2"); // chevauche avec l'animation précédente
+loaderTimeline.to(".hero-content", { opacity: 1, duration: 0.8 }, "-=0.2"); // chevauche également
+
+// Puis on joue la timeline comme avant lorsque la page est chargée
+window.addEventListener("load", () => {
+    loaderTimeline.play();
+});
 
 
 /**************************** Animation navBar ********************************/
@@ -113,6 +128,15 @@ gsap.to("#matchPhone", {
 
 gsap.to("#profilPhone", {
     scale: 1.02, // Scale 1.1 = 110% de la taille originale
+    duration: 0.8,
+    repeat: -1, // Répète indéfiniment
+    yoyo: true, // Retourne à l'état original
+    ease: "sine.inOut"
+});
+/**************************** Animation Du H de la section Contact ********************************/
+
+gsap.to("#logoH", {
+    scale: 1.1, // Scale 1.1 = 110% de la taille originale
     duration: 0.8,
     repeat: -1, // Répète indéfiniment
     yoyo: true, // Retourne à l'état original
@@ -245,5 +269,6 @@ rows.forEach(function (e, i) {
         repeat: -1
     });
 });
+
 
 

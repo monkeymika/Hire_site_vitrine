@@ -114,6 +114,8 @@ span {
   }
 }
 
+/** Bandes noires **/
+
 .cb-tagreel {
   position: relative;
 }
@@ -193,17 +195,39 @@ span {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #84e7e9;
+  background: var(--darkBlue);
   z-index: 9999;
-  overflow-y: hidden; /* Cache la barre de défilement */
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#loader-logo {
-  width: 70%; /* ou la taille que tu veux */
-  height: auto;
+.bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 20%;
+  background: white;
+}
+
+.bar:nth-child(1) {
+  left: 0%;
+}
+.bar:nth-child(2) {
+  left: 20%;
+}
+.bar:nth-child(3) {
+  left: 40%;
+}
+.bar:nth-child(4) {
+  left: 60%;
+}
+.bar:nth-child(5) {
+  left: 80%;
+}
+.bar:nth-child(6) {
+  left: 100%;
 }
 
 /*************************************************************************/
@@ -243,6 +267,12 @@ nav {
 
 .btnApp-container a {
   color: black;
+}
+
+.btnApp-container:hover a {
+  background: var(--darkBlue);
+  color: white;
+  transition: 0.5s;
 }
 
 .btnApp {
@@ -514,7 +544,7 @@ nav {
 .contact-content span {
   font-weight: 900;
   font-family: "ciabatta", sans-serif;
-  color: #a3fcfd;
+  color: white;
 }
 
 .contactImg-container {
@@ -638,4 +668,8 @@ hr {
   cursor: pointer;
   display: none; /* caché par défaut */
   border: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
